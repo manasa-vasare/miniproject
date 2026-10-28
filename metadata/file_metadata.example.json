@@ -1,0 +1,54 @@
+{
+  "chunk_size": 65536,
+  "chunks": {
+    "F002-C001": {
+      "peers": [
+        "A",
+        "B"
+      ],
+      "sequence": 1,
+      "sha256": "26846a801f99c7d324a2c0200d0c3f59704cc3969fe000488351fe753f1abd57",
+      "size": 65536
+    },
+    "F002-C002": {
+      "peers": [
+        "B",
+        "C"
+      ],
+      "sequence": 2,
+      "sha256": "d1d505214dec613692686d4ca84a05c9f2f6a4f070850df9463eff38cf92490b",
+      "size": 65536
+    },
+    "F002-C003": {
+      "peers": [
+        "C",
+        "A"
+      ],
+      "sequence": 3,
+      "sha256": "92189705bd7f76b1d5151ea82777c0eb2b2695b27f2cb73ed371b556fb2988ed",
+      "size": 65536
+    },
+    "F002-C004": {
+      "peers": [
+        "A",
+        "B"
+      ],
+      "sequence": 4,
+      "sha256": "8d0a09f17c64fd899254ae279e5d13dd8391ac8fa773e39cba009a9ed86cf0f0",
+      "size": 65536
+    },
+    "F002-C005": {
+      "peers": [
+        "B",
+        "C"
+      ],
+      "sequence": 5,
+      "sha256": "e5440a6e0cc13e96193be9ed645f04be998c22b744d6b428e2585b2021776036",
+      "size": 37856
+    }
+  },
+  "file_id": "F002",
+  "filename": "sample_file.bin",
+  "original_size": 300000,
+  "total_chunks": 5
+}

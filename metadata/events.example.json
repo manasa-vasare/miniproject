@@ -1,0 +1,134 @@
+{
+  "events": [
+    {
+      "category": "FILE_CHUNKED",
+      "details": {
+        "file_id": "F002",
+        "source_path": "/tmp/rfe_run/input/sample_file.bin"
+      },
+      "message": "file split into fixed-size chunks",
+      "timestamp": "2026-10-06T10:36:32Z"
+    },
+    {
+      "category": "DISTRIBUTION_DONE",
+      "details": {
+        "replication_factor": 2,
+        "total_chunks": 5
+      },
+      "message": "chunks distributed round-robin with replication",
+      "timestamp": "2026-10-06T10:36:32Z"
+    },
+    {
+      "category": "PEER_KILLED",
+      "details": {
+        "peer": "A",
+        "pid": 4507
+      },
+      "message": "peer process terminated (simulated failure)",
+      "timestamp": "2026-10-06T10:36:32Z"
+    },
+    {
+      "category": "PEER_FAILURE_DETECTED",
+      "details": {
+        "detection_ms": 504,
+        "peer": "A"
+      },
+      "message": "heartbeat threshold reached; peer marked OFFLINE",
+      "timestamp": "2026-10-06T10:36:32Z"
+    },
+    {
+      "category": "RECOVERY_STARTED",
+      "details": {
+        "affected_chunks": [
+          "F002-C001",
+          "F002-C003",
+          "F002-C004"
+        ],
+        "affected_count": 3,
+        "failed_peer": "A"
+      },
+      "message": "peer failure received; affected chunks identified",
+      "timestamp": "2026-10-06T10:36:32Z"
+    },
+    {
+      "category": "CHUNK_RECOVERED",
+      "details": {
+        "chunk_id": "F002-C001",
+        "sha256": "26846a801f99c7d324a2c0200d0c3f59704cc3969fe000488351fe753f1abd57",
+        "source_peer": "B",
+        "verified": true
+      },
+      "message": "chunk recovered and SHA-256 verified",
+      "timestamp": "2026-10-06T10:36:32Z"
+    },
+    {
+      "category": "CHUNK_RECOVERED",
+      "details": {
+        "chunk_id": "F002-C002",
+        "sha256": "d1d505214dec613692686d4ca84a05c9f2f6a4f070850df9463eff38cf92490b",
+        "source_peer": "B",
+        "verified": true
+      },
+      "message": "chunk recovered and SHA-256 verified",
+      "timestamp": "2026-10-06T10:36:32Z"
+    },
+    {
+      "category": "CHUNK_RECOVERED",
+      "details": {
+        "chunk_id": "F002-C003",
+        "sha256": "92189705bd7f76b1d5151ea82777c0eb2b2695b27f2cb73ed371b556fb2988ed",
+        "source_peer": "C",
+        "verified": true
+      },
+      "message": "chunk recovered and SHA-256 verified",
+      "timestamp": "2026-10-06T10:36:32Z"
+    },
+    {
+      "category": "CHUNK_RECOVERED",
+      "details": {
+        "chunk_id": "F002-C004",
+        "sha256": "8d0a09f17c64fd899254ae279e5d13dd8391ac8fa773e39cba009a9ed86cf0f0",
+        "source_peer": "B",
+        "verified": true
+      },
+      "message": "chunk recovered and SHA-256 verified",
+      "timestamp": "2026-10-06T10:36:32Z"
+    },
+    {
+      "category": "CHUNK_RECOVERED",
+      "details": {
+        "chunk_id": "F002-C005",
+        "sha256": "e5440a6e0cc13e96193be9ed645f04be998c22b744d6b428e2585b2021776036",
+        "source_peer": "B",
+        "verified": true
+      },
+      "message": "chunk recovered and SHA-256 verified",
+      "timestamp": "2026-10-06T10:36:32Z"
+    },
+    {
+      "category": "RECOVERY_FINISHED",
+      "details": {
+        "bytes_transferred": 300000,
+        "integrity_failures": 0,
+        "recovered": 5,
+        "retry_count": 0,
+        "success": true,
+        "unrecoverable": 0
+      },
+      "message": "all chunks recovered",
+      "timestamp": "2026-10-06T10:36:32Z"
+    },
+    {
+      "category": "RECONSTRUCTION",
+      "details": {
+        "byte_identical": true,
+        "original": "/tmp/rfe_run/input/sample_file.bin",
+        "original_sha256": "f517888449b84badaf6aeee21f506cceea03424c68cb968b8285f0d902a39079",
+        "recovered": "output/recovered_sample_file.bin",
+        "recovered_sha256": "f517888449b84badaf6aeee21f506cceea03424c68cb968b8285f0d902a39079"
+      },
+      "message": "recovered file matches the original",
+      "timestamp": "2026-10-06T10:36:32Z"
+    }
+  ]
+}
